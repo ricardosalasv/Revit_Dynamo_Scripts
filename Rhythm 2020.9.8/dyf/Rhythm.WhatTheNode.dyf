@@ -1,0 +1,201 @@
+{
+  "Uuid": "70a633b2-127a-47b1-ae09-33ac32d63d52",
+  "IsCustomNode": true,
+  "Category": "Rhythm.Tools",
+  "Description": "This node will let you search dynamonodes.com for the most likely package a node is from. Helps fix \"red\" nodes when users do not have package installed.",
+  "Name": "Rhythm.WhatTheNode",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "likelyPackage",
+      "Id": "dc68ece5984942eca43679e937328ab8",
+      "Inputs": [
+        {
+          "Id": "e4e4eef47c2c45169bcb3e1871e8903b",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "Node has been retired! Use Monocle package to find what node came from where. Video Below:",
+      "Id": "602e089b956042e1839ef1dc491d0165",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "89a09e2c4c484f60afeeba21945f7d1b",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"https://www.youtube.com/watch?v=AYfAYHQmdTA&feature=youtu.be\";",
+      "Id": "a3b98cf1060f4e0c8edb281ca0958794",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2e3321173f3140978f0fe5ceb9b546e3",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "1669123979604713b34448f0d16ff874",
+      "Inputs": [
+        {
+          "Id": "c08180e11e574d139f153d699747445f",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "34ef0087a3654c72b62ace457a03104c",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e706e823fc1244f5bc9b44e7774332af",
+          "Name": "list",
+          "Description": "A list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list out of the given inputs"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "89a09e2c4c484f60afeeba21945f7d1b",
+      "End": "c08180e11e574d139f153d699747445f",
+      "Id": "1830e257bc1f429489a4183a85c5d90f"
+    },
+    {
+      "Start": "2e3321173f3140978f0fe5ceb9b546e3",
+      "End": "34ef0087a3654c72b62ace457a03104c",
+      "Id": "59b2c43d649e41328462f70f8de28415"
+    },
+    {
+      "Start": "e706e823fc1244f5bc9b44e7774332af",
+      "End": "e4e4eef47c2c45169bcb3e1871e8903b",
+      "Id": "f53adf5920e547508f8e03ab4632ec03"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.3.8810",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "dc68ece5984942eca43679e937328ab8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5721.822482240972,
+        "Y": 1289.3688605017176
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "602e089b956042e1839ef1dc491d0165",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5380.83461372182,
+        "Y": 1251.77643839694
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Monocle Overview",
+        "Id": "a3b98cf1060f4e0c8edb281ca0958794",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5019.3300858813809,
+        "Y": 1352.911054645891
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "1669123979604713b34448f0d16ff874",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5589.2780700249041,
+        "Y": 1287.5096023346148
+      }
+    ],
+    "Annotations": [],
+    "X": -4332.983398580931,
+    "Y": -768.99613064850723,
+    "Zoom": 0.91048680047793551
+  }
+}
